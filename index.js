@@ -37,6 +37,10 @@ app.use("/admin", adminRoutes)
 app.use(authRoutes)
 app.use(userRoutes)
 
+app.use((req, res) => {
+    return res.redirect("/");
+})
+
 const DB_USERNAME = "canoguzorhan066"
 const DB_PASSWORD = "nodejs-book-project"
 const DB_DATABASE = "ecommerce"
